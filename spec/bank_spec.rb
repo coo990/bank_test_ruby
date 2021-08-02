@@ -5,4 +5,10 @@ describe Bank do
     bank = Bank.new
     expect(bank.balance).to eq(0)
   end
+
+  it 'adds 1000 to balance' do
+    bank = Bank.new
+    expect(bank.deposit(1000)).to eq(1000)
+  end
+
 end
