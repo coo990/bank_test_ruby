@@ -15,9 +15,9 @@ class Bank
     @transaction << "#{time} || || #{amount} || #{balance}"
   end
 
-  def transaction
-    return @transaction.join
-  end
+  # def transaction
+  #   return @transaction.join
+  # end
 
   def statement
     puts "date || credit || debit || balance"

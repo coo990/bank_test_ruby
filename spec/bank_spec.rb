@@ -20,7 +20,7 @@ describe Bank do
 
   it 'stores transactions' do
     bank.deposit(1000, "10/01/2012")
-    expect(bank.transaction).to eq("10/01/2012 || 1000 || || 1000")
+    expect(bank.transaction).to eq(["10/01/2012 || 1000 || || 1000"])
   end
 
   it 'prints statement' do
