@@ -12,11 +12,17 @@ class Bank
 
   def withdraw(amount, time)
     @balance -= amount
-    #puts "#{time} || || #{amount} || #{balance}"
+    @transaction << "#{time} || || #{amount} || #{balance}"
   end
 
   def transaction
     return @transaction.join
+  end
+
+  def statement
+    puts "date || credit || debit || balance"
+    array = @transaction.sort! { |x, y| y <=> x }
+    array.each {|x| puts x }
   end
 
 end

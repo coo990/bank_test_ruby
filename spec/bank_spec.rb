@@ -23,4 +23,9 @@ describe Bank do
     expect(bank.transaction).to eq("10/01/2012 || 1000 || || 1000")
   end
 
+  it 'prints statement' do
+    bank.deposit(1000, "10/01/2012")
+    expect(bank.statement).to eq(["10/01/2012 || 1000 || || 1000"])
+  end
+
 end
