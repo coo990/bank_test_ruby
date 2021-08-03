@@ -10,23 +10,23 @@ describe Bank do
   end
 
   it 'adds 1000 to balance on 10/01/2012' do
-    bank.deposit(1000, '10/01/2012')
-    expect(bank.balance).to eq(1000)
+    bank.deposit(1000.00, '10/01/2012')
+    expect(bank.balance).to eq(1000.00)
   end
 
   it 'withdraws 500 from balance on 12/01/2012' do
-    bank.deposit(1000, '10/01/2012')
-    bank.withdraw(500, '12/01/2012')
-    expect(bank.balance).to eq(500)
+    bank.deposit(1000.00, '10/01/2012')
+    bank.withdraw(500.00, '12/01/2012')
+    expect(bank.balance).to eq(500.00)
   end
 
   it 'stores transactions' do
-    bank.deposit(5000, '13/05/2021')
-    expect(bank.transaction).to eq(['13/05/2021 || 5000 || || 5000'])
+    bank.deposit(5000.00, '13/05/2021')
+    expect(bank.transaction).to eq(['13/05/2021 || 5000.0 || || 5000.0'])
   end
 
   it 'prints statement' do
-    bank.deposit(1000, '10/01/2012')
-    expect(bank.statement).to eq(['10/01/2012 || 1000 || || 1000'])
+    bank.deposit(1000.00, '10/01/2012')
+    expect(bank.statement).to eq(['10/01/2012 || 1000.0 || || 1000.0'])
   end
 end
