@@ -24,3 +24,5 @@ rspec
 ### Screenshot of app
 ![Imgur](https://i.imgur.com/NaEhaGN.png)
 
+## Class diagram
+![Imgur](https://i.imgur.com/siDLh7S.png)

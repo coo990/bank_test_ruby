@@ -25,5 +25,6 @@ class Bank
     # on the bottom
     array = @transaction.sort! { |x, y| y <=> x }
     array.each { |x| puts x }
+    array.empty
   end
 end
