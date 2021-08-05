@@ -22,11 +22,11 @@ describe Bank do
 
   it 'stores transactions' do
     bank.deposit(5000.00, '13/05/2021')
-    expect(bank.transaction).to eq(['13/05/2021 || 5000.0 || || 5000.0'])
+    expect(bank.transaction).to eq(['13/05/2021 || 5000.00 || || 5000.00'])
   end
 
   it 'prints statement' do
     bank.deposit(1000.00, '10/01/2012')
-    expect(bank.statement).to eq(['10/01/2012 || 1000.0 || || 1000.0'])
+    expect(bank.statement).to eq(['10/01/2012 || 1000.00 || || 1000.00'])
   end
 end
