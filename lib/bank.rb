@@ -2,18 +2,17 @@
 
 # Bank test that takes transactions and prints statement
 class Bank
-  attr_reader :balance, :transaction
+  attr_reader :balance
 
-  def initialize#(#transaction = Transaction.new)
+  # (#transaction = Transaction.new)
+  def initialize
     @balance = 0
     @transaction = []
-    #@transaction = transaction
   end
 
   def deposit(amount, time)
-    true_amount = amount.round(2)
-    @balance += true_amount
-    @transaction << "#{time} || #{true_amount}0 || || #{balance}0"
+    @balance += amount
+    @transaction << "#{time} || #{amount}0 || || #{balance}0"
   end
 
   def withdraw(amount, time)
