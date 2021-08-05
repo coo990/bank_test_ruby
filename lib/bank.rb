@@ -4,19 +4,21 @@
 class Bank
   attr_reader :balance, :transaction
 
-  def initialize
+  def initialize#(#transaction = Transaction.new)
     @balance = 0
     @transaction = []
+    #@transaction = transaction
   end
 
   def deposit(amount, time)
-    @balance += amount
-    @transaction << "#{time} || #{amount} || || #{balance}"
+    true_amount = amount.round(2)
+    @balance += true_amount
+    @transaction << "#{time} || #{true_amount}0 || || #{balance}0"
   end
 
   def withdraw(amount, time)
     @balance -= amount
-    @transaction << "#{time} || || #{amount} || #{balance}"
+    @transaction << "#{time} || || #{amount}0 || #{balance}0"
   end
 
   def statement
@@ -25,6 +27,5 @@ class Bank
     # on the bottom
     array = @transaction.sort! { |x, y| y <=> x }
     array.each { |x| puts x }
-    array.empty
   end
 end
