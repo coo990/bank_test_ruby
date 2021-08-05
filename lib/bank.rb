@@ -8,6 +8,7 @@ class Bank
   def initialize
     @balance = 0
     @transaction = []
+    #Transaction.new
   end
 
   def deposit(amount, time)
@@ -24,7 +25,7 @@ class Bank
     puts 'date || credit || debit || balance'
     # Sorts the array with the first transaction
     # on the bottom
-    array = @transaction.sort! { |x, y| y <=> x }
+    array = @transaction.sort_by { |x| -x }
     array.each { |x| puts x }
   end
 end

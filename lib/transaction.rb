@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 class Transaction
-end
+  def initialize
+    @transaction = []
+  end
 
-# transaction = []
+  def print_transaction
+    return @transaction
+  end
+end
